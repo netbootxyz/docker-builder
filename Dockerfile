@@ -21,6 +21,3 @@ RUN \
       syslinux \
       syslinux-common \
       toilet
-
-# add local files
-COPY /root /
