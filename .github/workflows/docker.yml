@@ -11,4 +11,5 @@ jobs:
         name: netbootxyz/docker-builder
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        dockerfile: Dockerfile
         snapshot: true
