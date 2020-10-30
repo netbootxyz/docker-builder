@@ -21,3 +21,5 @@ RUN \
       syslinux \
       syslinux-common \
       toilet
+
+RUN pip3 install ansible==2.10.0
