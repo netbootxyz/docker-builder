@@ -1,0 +1,34 @@
+name: Publish Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+      with:
+          driver-opts: image=moby/buildkit:master
+
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y%m%d%H%M')"
+        
+    - name: Login to the GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GHCR_TOKEN }}
+      
+    - name: Build and push image
+      id: docker_build
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        context: ./
+        file: ./Dockerfile
+        tags: |
+          ghcr.io/${{ github.repository_owner }}/${{ github.workflow }}:latest
+          ghcr.io/${{ github.repository_owner }}/${{ github.workflow }}:${{ steps.date.outputs.date }}
