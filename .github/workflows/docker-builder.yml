@@ -1,5 +1,7 @@
 name: docker-builder
 on: [push]
+env:
+  IMAGE_VERSION: 1.${{ github.run_number }}
 jobs:
   build:
     runs-on: ubuntu-latest
