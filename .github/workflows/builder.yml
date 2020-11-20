@@ -1,4 +1,4 @@
-name: docker-builder
+name: builder
 on:
   push:
   schedule:
