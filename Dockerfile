@@ -16,6 +16,7 @@ RUN \
       git \
       isolinux \
       liblzma-dev \
+      libslirp-dev \
       python3-pip \
       python3-setuptools \
       syslinux \
