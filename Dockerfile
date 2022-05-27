@@ -2,6 +2,8 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+ARG ANSIBLE_VERSION=5.7.1
+
 RUN \
  apt-get update && \
  apt-get install -y \
@@ -23,4 +25,4 @@ RUN \
       syslinux-common \
       toilet
 
-RUN pip3 install ansible==5.7.1
+RUN pip3 install ansible==${ANSIBLE_VERSION}
