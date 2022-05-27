@@ -2,6 +2,7 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+# renovate: datasource=pypi depName=ansible
 ARG ANSIBLE_VERSION=5.7.1
 
 RUN \
