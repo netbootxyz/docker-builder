@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG ANSIBLE_CORE_VERSION=2.13.1
 
 # renovate: datasource=pypi depName=ansible
-ARG ANSIBLE_VERSION=5.8.0
+ARG ANSIBLE_VERSION=5.9.0
 
 RUN \
  apt-get update && \
