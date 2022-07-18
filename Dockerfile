@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate: datasource=pypi depName=ansible-core
-ARG ANSIBLE_CORE_VERSION=2.13.1
+ARG ANSIBLE_CORE_VERSION=2.13.2
 
 # renovate: datasource=pypi depName=ansible
 ARG ANSIBLE_VERSION=6.1.0
