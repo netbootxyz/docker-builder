@@ -13,5 +13,18 @@
         "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=(?<currentValue>.*)\\s"
       ]
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    }
   ]
 }
