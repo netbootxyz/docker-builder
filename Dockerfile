@@ -2,9 +2,6 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# renovate: datasource=pypi depName=ansible-core
-ARG ANSIBLE_CORE_VERSION=2.13.5
-
 # renovate: datasource=pypi depName=ansible
 ARG ANSIBLE_VERSION=6.5.0
 
@@ -29,4 +26,4 @@ RUN \
       syslinux-common \
       toilet
 
-RUN pip3 install ansible-core==${ANSIBLE_CORE_VERSION} ansible==${ANSIBLE_VERSION}
+RUN pip3 install ansible==${ANSIBLE_VERSION}
