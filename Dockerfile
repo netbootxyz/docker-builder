@@ -11,10 +11,12 @@ RUN \
       apache2 \
       binutils-dev \
       binutils-aarch64-linux-gnu \
+      binutils-x86-64-linux-gnu \
       build-essential \
       dosfstools \
       figlet \
       gcc-aarch64-linux-gnu \
+      gcc-x86-64-linux-gnu \
       genisoimage \
       git \
       isolinux \
@@ -22,8 +24,6 @@ RUN \
       libslirp-dev \
       python3-pip \
       python3-setuptools \
-      syslinux \
-      syslinux-common \
       toilet
 
 RUN pip3 install ansible==${ANSIBLE_VERSION}
