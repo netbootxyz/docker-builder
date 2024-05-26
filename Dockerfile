@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -22,8 +22,9 @@ RUN \
       isolinux \
       liblzma-dev \
       libslirp-dev \
+      pipx \
       python3-pip \
       python3-setuptools \
       toilet
 
-RUN pip3 install ansible==${ANSIBLE_VERSION}
+RUN pipx install ansible==${ANSIBLE_VERSION}
