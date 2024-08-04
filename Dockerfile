@@ -1,9 +1,9 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate: datasource=pypi depName=ansible
-ARG ANSIBLE_VERSION=9.6.0
+ARG ANSIBLE_VERSION=10.2.0
 
 RUN \
  apt-get update && \
@@ -25,5 +25,7 @@ RUN \
       python3-pip \
       python3-setuptools \
       toilet
+
+RUN rm -rf /usr/lib/python3.12/EXTERNALLY-MANAGED
 
 RUN pip3 install ansible==${ANSIBLE_VERSION}
