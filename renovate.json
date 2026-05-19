@@ -6,9 +6,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "(^|/)Dockerfile$",
-        "(^|/)Dockerfile\\.[^/]*$"
+      "managerFilePatterns": [
+        "/(^|/)Dockerfile$/",
+        "/(^|/)Dockerfile\\.[^/]*$/"
       ],
       "matchStrings": [
         "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=(?<currentValue>.*)\\s"
