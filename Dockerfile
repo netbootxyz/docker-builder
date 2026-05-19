@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -26,6 +26,6 @@ RUN \
       python3-setuptools \
       toilet
 
-RUN rm -rf /usr/lib/python3.12/EXTERNALLY-MANAGED
+RUN rm -rf /usr/lib/python3.14/EXTERNALLY-MANAGED
 
 RUN pip3 install ansible==${ANSIBLE_VERSION}
