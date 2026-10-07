@@ -3,7 +3,7 @@ FROM ubuntu:26.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate: datasource=pypi depName=ansible
-ARG ANSIBLE_VERSION=14.4.0
+ARG ANSIBLE_VERSION=14.5.0
 
 RUN \
  apt-get update && \
